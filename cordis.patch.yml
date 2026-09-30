@@ -1,0 +1,10 @@
+# Standalone bundle layer for this client-only plugin. Mounting the row is what
+# makes `@deepseek-ai/dsh-client-modules` scan the package's `dsh.client`
+# declaration and serve `./client.js` as a browser boot row; the host half is a
+# deliberate no-op.
+#
+# The row id is namespaced so a profile that also mounts another row for this
+# same package can still address each row on its own.
+- insert:
+    - id: thomas-quote-selection-bundle
+      name: '@thomas/dsh-client-quote-selection'
